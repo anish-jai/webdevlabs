@@ -53,25 +53,23 @@ function greetingFunc() {
    let h = d.getHours();
    let E = document.getElementById("greeting");
 
-   if (E) {
-      if ((h >= 20 && h < 24) || (h >= 0 && h < 5))
-      {
-         E.innerHTML = "Good night";
-      }
-      else if (h < 12)
-      {
-         E.innerHTML = "Good morning";
-      }
-      else if (h < 18)
-      {
-         E.innerHTML = "Good afternoon";
-      }
-      else if (h < 20)
-      {
-         E.innerHTML = "Good evening";
-      }
-      E.innerHTML += ", I am Anish.";
+   if ((h >= 20 && h < 24) || (h >= 0 && h < 5))
+   {
+      E.innerHTML = "Good night";
    }
+   else if (h < 12)
+   {
+      E.innerHTML = "Good morning";
+   }
+   else if (h < 18)
+   {
+      E.innerHTML = "Good afternoon";
+   }
+   else if (h < 20)
+   {
+      E.innerHTML = "Good evening";
+   }
+   E.innerHTML += ", I am Anish.";
 }
 
 findTheBanana(L1);

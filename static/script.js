@@ -75,8 +75,8 @@ function greetingFunc() {
 // findTheBanana(L1);
 // findTheBanana(L2);
 
-
-
+console.log("here is pathname");
+console.log(window.location.pathname);
 if (window.location.pathname === "/" || window.location.pathname === "" || window.location.href.includes("index.html")) {
    greetingFunc();
 }

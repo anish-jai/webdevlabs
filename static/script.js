@@ -52,24 +52,21 @@ function greetingFunc() {
    let d = new Date();
    let h = d.getHours();
    let E = document.getElementById("greeting");
-
-   if ((h >= 20 && h < 24) || (h >= 0 && h < 5))
-   {
-      E.innerHTML = "Good night";
+   if (E) {
+      if ((h >= 20 && h < 24) || (h >= 0 && h < 5)) {
+         E.innerHTML = "Good night";
+      }
+      else if (h < 12) {
+         E.innerHTML = "Good morning";
+      }
+      else if (h < 18) {
+         E.innerHTML = "Good afternoon";
+      }
+      else if (h < 20) {
+         E.innerHTML = "Good evening";
+      }
+      E.innerHTML += ", I am Anish.";
    }
-   else if (h < 12)
-   {
-      E.innerHTML = "Good morning";
-   }
-   else if (h < 18)
-   {
-      E.innerHTML = "Good afternoon";
-   }
-   else if (h < 20)
-   {
-      E.innerHTML = "Good evening";
-   }
-   E.innerHTML += ", I am Anish.";
 }
 
 // findTheBanana(L1);
@@ -77,11 +74,7 @@ function greetingFunc() {
 
 // console.log("here is pathname");
 // console.log(window.location.pathname);
-if (!window.location.href.includes("fun.html") &&
-   !window.location.href.includes("contact.html") &&
-   !window.location.href.includes("cv.html")) {
-   greetingFunc();
-}
+
 
 function addYear() {
    let yearElem = document.getElementById("copyYear");
@@ -123,3 +116,9 @@ if (form) {
    });
 
 }
+
+// if (!window.location.href.includes("fun.html") &&
+//    !window.location.href.includes("contact.html") &&
+//    !window.location.href.includes("cv.html")) {
+   greetingFunc();
+// }

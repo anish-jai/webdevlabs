@@ -58,3 +58,39 @@ th {
 tr:nth-child(even) { 
    background-color: #bababa;
 }
+
+#funList {
+   display: none;
+}
+
+#showButton {
+   background-color: #001f74;
+   color: white;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+#readMore {
+   background-color: #001f74;
+   color: white;
+   cursor: pointer;
+}
+
+#readLess {
+   background-color: #001f74;
+   color: white;
+   cursor: pointer;
+   display: none;
+}
+
+.error-message {
+   color: red;
+   font-size: 14px;
+   display: block;
+   margin-top: 5px;
+}
+
+.error-input {
+   border: 2px solid red;
+   background-color: #ffe6e6;
+}

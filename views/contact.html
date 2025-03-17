@@ -13,17 +13,18 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
    <script src="../static/script.js" defer></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 </head>
-<body>
-   <header>
-      <h1 id="webname"> Anish Jain </h1>
-      <nav class="navigation">
-         <a href="../index.html">Home</a>
-         <a href="cv.html">Resume</a>
-         <a href="fun.html">Hobbies</a>
-         <a href="contact.html">Contact</a>
+<body onload="addYear()">
+    <header>
+    <h1 id="webname"> Anish Jain </h1>
+    <nav class="navigation">
+        <a href="../index.html">Home</a>
+        <a href="cv.html">Resume</a>
+        <a href="fun.html">Hobbies</a>
+        <a href="contact.html">Contact</a>
      </nav>
   </header>
 
@@ -50,7 +51,11 @@
      
 
       <h3>Send me a message</h3>
-      <form>
+      <!-- <form id="contactForm">
+        <p class="error-message" id="nameError"></p>
+        <p class="error-message" id="emailError"></p>
+        <p class="error-message" id="commentError"></p>
+
          <label for="name">Name:</label>
          <input type="text" id="name" name="name" required><br><br>
 
@@ -61,12 +66,32 @@
          <textarea id="comment" name="comment" required></textarea><br><br>
 
          <input type="submit" value="Submit">
-      </form>
+      </form> -->
+    <form id="contactForm" validate>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <!-- <span id="nameError" class="error-message"></span> -->
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <!-- <span id="emailError" class="error-message"></span> -->
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <!-- <span id="messageError" class="error-message"></span> -->
+        </div>
+        <span id="error1" class="error-message"></span>
+        <button type="submit">Submit</button>
+    </form>
 
   </div>
 
-   <footer>
-      <p>&copy; 2025 Anish Jain. All rights reserved.</p>
-   </footer>
+    <footer>
+        <p id="copyYear"></p>
+        <p>Anish Jain. All rights reserved.</p>
+    </footer>
 </body>
 </html>

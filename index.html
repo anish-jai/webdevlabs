@@ -13,10 +13,11 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
    <script src="static/script.js" defer></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 </head>
-<body>
+<body onload="addYear()">
    <header>
       <h1 id="webname"> Anish Jain </h1>
       <nav class="navigation">
@@ -32,15 +33,20 @@
       <p>Hello world!</p>
 
       <img src="static/anishpfp.jpg" alt="Profile Picture for Anish Jain" width="300">
-      <p id="intro"> 
-         Hi! I'm Anish Jain, a student at Carnegie Mellon University studying Information Systems and CS.
-         I'm building this website to showcase some interesting things about me, like my past experiences and interests.
+
+      <p id="smallBio">Hi! I'm Anish Jain, a student at Carnegie Mellon University studying Information Systems and CS.</p>
+      <p id="allBio" style="display: none;">
+        I've built this website to showcase some interesting things about me, like my past experiences and interests. 
+        I've learned a lot through my past experiences, as you can see on my Resume page.
       </p>
+      <button id="readMore">Read More</button>
+      <button id="readLess">Read Less</button>
 
   </div>
 
   <footer>
-      <p>&copy; 2025 Anish Jain. All rights reserved.</p>
+      <p id="copyYear"></p>
+      <p>Anish Jain. All rights reserved.</p>
   </footer>
 </body>
 </html>

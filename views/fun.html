@@ -13,10 +13,12 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
    <script src="../static/script.js" defer></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 
 </head>
-<body>
+<body onload="addYear()">
    <header>
       <h1 id="webname"> Anish Jain </h1>
       <nav class="navigation">
@@ -29,7 +31,8 @@
 
   <div class="main">
       <h2> Things I do for Fun: </h2>
-      <ul>
+      <button id="showButton" onclick="showList()">Click to see...</button>
+      <ul id="funList">
          <li> Watching sports (Basketball, Football, Cricket) </li>
          <li> Travelling the world!</li>
          <li> Listening to Music (Drake, SZA, Frank Ocean) </li>
@@ -39,7 +42,8 @@
   </div>
 
    <footer>
-      <p>&copy; 2025 Anish Jain. All rights reserved.</p>
+      <p id="copyYear"></p>
+      <p>Anish Jain. All rights reserved.</p>
    </footer>
 </body>
 </html>

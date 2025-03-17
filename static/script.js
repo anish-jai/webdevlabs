@@ -72,9 +72,52 @@ function greetingFunc() {
    E.innerHTML += ", I am Anish.";
 }
 
-findTheBanana(L1);
-findTheBanana(L2);
-greetingFunc();
+// findTheBanana(L1);
+// findTheBanana(L2);
 
-// if (window.location.pathname === "/" || window.location.href.includes("index.html")) {
-// }
+
+
+if (window.location.pathname === "/" || window.location.pathname === "" || window.location.href.includes("index.html")) {
+   greetingFunc();
+}
+
+function addYear() {
+   let yearElem = document.getElementById("copyYear");
+   if (yearElem) {
+       let currentYear = new Date().getFullYear();
+       yearElem.innerHTML = `&copy; ${currentYear}`;
+   }
+}
+
+function showList() {
+   document.getElementById("funList").style.display = "block";
+   document.getElementById("showButton").style.display = "none";
+}
+
+$(document).ready(function() {
+   $("#readMore").click(function() {
+       $("#allBio").slideDown();
+       $("#readMore").hide();
+       $("#readLess").show();
+   });
+
+   $("#readLess").click(function() {
+       $("#allBio").slideUp();
+       $("#readLess").hide();
+       $("#readMore").show();
+   });
+});
+
+let form = document.getElementById('contactForm');
+if (form) {
+   const name = document.getElementById('name');
+   const email = document.getElementById('email');
+   const message = document.getElementById('message');
+
+   [name, email, message].forEach(input => {
+      input.addEventListener('invalid', function (event) {
+         error1.textContent = "Please make the inputs to the form valid before submitting!";
+      });
+   });
+
+}

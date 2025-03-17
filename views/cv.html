@@ -13,10 +13,12 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
    <script src="../static/script.js" defer></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 
 </head>
-<body>
+<body onload="addYear()">
    <header>
       <h1 id="webname"> Anish Jain </h1>
       <nav  class="navigation">
@@ -36,7 +38,7 @@
          </tr>
          <tr>
             <td>Venture Analyst</td>
-            <td>BlueTree Capital Group – Early-stage startups, financial analysis.</td>
+            <td>BlueTree Capital Group - Early-stage startups, financial analysis.</td>
          </tr>
          <tr>
             <td>VCIC Competitions Team</td>
@@ -70,8 +72,9 @@
       <p><a href="../static/resume.pdf" target="_blank" rel="noopener noreferrer">Check Out My Full Resume (PDF)</a></p>
   </div>
 
-   <footer>
-      <p>&copy; 2025 Anish Jain. All rights reserved.</p>
-   </footer>
+  <footer>
+      <p id="copyYear"></p>
+      <p>Anish Jain. All rights reserved.</p>
+  </footer>
 </body>
 </html>

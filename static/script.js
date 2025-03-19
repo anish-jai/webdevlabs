@@ -84,10 +84,10 @@ function addYear() {
    }
 }
 
-function showList() {
-   document.getElementById("funList").style.display = "block";
-   document.getElementById("showButton").style.display = "none";
-}
+// function showList() {
+//    document.getElementById("funList").style.display = "block";
+//    document.getElementById("showButton").style.display = "none";
+// }
 
 $(document).ready(function() {
    $("#readMore").click(function() {
@@ -122,3 +122,15 @@ if (form) {
 //    !window.location.href.includes("cv.html")) {
    greetingFunc();
 // }
+
+function getAdvice() {
+    fetch('https://api.adviceslip.com/advice')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('adviceText').innerText = data.slip.advice;
+        })
+        .catch(error => {
+            document.getElementById('adviceText').innerText = 'Oops! Failed to get advice. Try again later.';
+            console.error('Error fetching advice:', error);
+        });
+}
